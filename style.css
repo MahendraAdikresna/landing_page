@@ -1,0 +1,206 @@
+/* --- CSS VARIABLES --- 
+           Memudahkan kita mengganti warna di seluruh website sekaligus 
+        */
+:root {
+  --primary-color: #6f4e37; /* Warna Kopi */
+  --secondary-color: #ecb176; /* Warna Krem Muda */
+  --dark-color: #2d2424; /* Hitam Arang */
+  --light-color: #fed8b1; /* Beige */
+}
+
+/* --- BASIC RESET --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #fffaf5;
+  color: var(--dark-color);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* --- NAVBAR --- */
+nav {
+  background: rgba(45, 36, 36, 0.95);
+  color: white;
+  padding: 15px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+nav .logo {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  color: var(--secondary-color);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: var(--secondary-color);
+}
+
+/* --- HERO SECTION --- */
+#home {
+  height: 100vh;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://scontent.fdps14-1.fna.fbcdn.net/v/t51.75761-15/473886102_18045974069514414_1379468045788139522_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Flvbl1J-gOoQ7kNvwFGCmRN&_nc_oc=Adk5GC_2yEX6lSc8De9mVkWsIjuBqerZK3URbU9IwG16UfccGVlORvv9qRXAb-2uJgw&_nc_zt=23&_nc_ht=scontent.fdps14-1.fna&_nc_gid=4P5wNUdNzQ8FExDfp_Nw2A&oh=00_AfsQgcY_7vFVhoqgeKqFbXHT3UuTpHJsHBtrFJFAEgDZDA&oe=698E6D9B");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+}
+
+#home h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+#home p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  font-weight: 300;
+}
+
+.btn-cta {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-cta:hover {
+  background-color: var(--secondary-color);
+  color: var(--dark-color);
+}
+
+/* --- SECTION STYLE --- */
+section {
+  padding: 100px 10%;
+}
+h2 {
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: var(--primary-color);
+}
+
+/* --- ABOUT --- */
+.about-box {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+.about-img {
+  flex: 1;
+  min-width: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 20px 20px 0 var(--secondary-color);
+}
+
+/* --- MENU --- */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+.menu-item {
+  background: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+
+.menu-item:hover {
+  transform: translateY(-10px);
+  background: var(--light-color);
+}
+.menu-item h3 {
+  margin: 15px 0 5px;
+}
+
+/* --- INFO / LOCATION --- */
+.info-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  background: var(--dark-color);
+  color: white;
+  padding: 50px;
+  border-radius: 20px;
+}
+
+.rating {
+  color: #f1c40f;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* --- FOOTER --- */
+footer {
+  background: #1a1515;
+  color: #777;
+  text-align: center;
+  padding: 30px;
+  margin-top: 50px;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  #home h1 {
+    font-size: 2.5rem;
+  }
+  .info-container {
+    grid-template-columns: 1fr;
+  }
+  nav ul {
+    display: none;
+  } /* Sederhana: sembunyikan menu di HP */
+}
