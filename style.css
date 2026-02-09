@@ -1,4 +1,4 @@
-/* --- CSS VARIABLES --- 
+* --- CSS VARIABLES --- 
            Memudahkan kita mengganti warna di seluruh website sekaligus 
         */
 :root {
@@ -6,6 +6,10 @@
   --secondary-color: #ecb176; /* Warna Krem Muda */
   --dark-color: #2d2424; /* Hitam Arang */
   --light-color: #fed8b1; /* Beige */
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* --- BASIC RESET --- */
@@ -80,7 +84,7 @@ nav ul li a:hover {
   text-align: center;
   color: white;
   padding: 0 20px;
-  background-attachment:fixed;
+  background-attachment: fixed;
 }
 
 #home h1 {
@@ -205,5 +209,3 @@ footer {
     display: none;
   } /* Sederhana: sembunyikan menu di HP */
 }
-
-
