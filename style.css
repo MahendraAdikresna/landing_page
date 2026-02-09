@@ -80,7 +80,7 @@ nav ul li a:hover {
   text-align: center;
   color: white;
   padding: 0 20px;
-  background-attachment: fixed;
+  background-attachment:fixed;
 }
 
 #home h1 {
@@ -205,4 +205,5 @@ footer {
     display: none;
   } /* Sederhana: sembunyikan menu di HP */
 }
+
 
